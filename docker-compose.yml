@@ -1,0 +1,32 @@
+services:
+    rabbitmq:
+        image: rabbitmq:3-management
+        container_name: rabbitmq
+        restart: always
+        ports:
+            - 5672:5672
+            - 15672:15672
+        volumes:
+            - ./docker/dadosRabbitmq:/var/lib/rabbitmq/
+        environment:
+            - RABBITMQ_DEFAULT_USER=admin
+            - RABBITMQ_DEFAULT_PASS=123456
+    mongo:
+        image: mongo
+        container_name: mongo-db
+        restart: always
+        ports:
+            - 27017:27017
+        environment:
+            MONGODB_INITDB_ROOT_USERNAME: root
+            MONGODB_INITDB_ROOT_PASSWORD: 123123
+    mongo-express:
+        image: mongo-express
+        container_name: mongo-express
+        restart: always
+        ports:
+            - 8081:8081
+        environment:
+            ME_CONFIG_MONGODB_ADMINUSERNAME: root
+            ME_CONFIG_MONGODB_ADMINPASSWORD: 123123
+
