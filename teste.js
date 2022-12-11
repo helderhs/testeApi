@@ -6,6 +6,6 @@ const consumer = async () => {
   //await server.publishInQueue('vendas', '{"carro": "car1", "carro2":"car2"}');
   await server.receiver('vendas');
 };
-
+//xxxx aeee
 //rodar api 2
 consumer();
