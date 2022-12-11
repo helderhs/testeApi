@@ -7,5 +7,6 @@ const consumer = async () => {
   await server.receiver('vendas');
 };
 
-//rodar api 2
+//rodar api 2                      
+// rodar
 consumer();
