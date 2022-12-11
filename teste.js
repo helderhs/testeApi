@@ -6,7 +6,7 @@ const consumer = async () => {
   //await server.publishInQueue('vendas', '{"carro": "car1", "carro2":"car2"}');
   await server.receiver('vendas');
 };
+//fonte git
 
 consumer();
-
 //fonte code
