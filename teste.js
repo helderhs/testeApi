@@ -7,6 +7,6 @@ const consumer = async () => {
   await server.receiver('vendas');
 };
 //fonte git
-
+//aaaa
 consumer();
 //fonte code
